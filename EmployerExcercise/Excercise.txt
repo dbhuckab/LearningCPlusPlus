@@ -1,0 +1,20 @@
+Suppose that you want to write an application for a company that matches
+employers and job seekers. A first step would be to design appropriate classes.
+Look at Figure 2.6 as a starting point. In this diagram, the Person has two
+subobjects: Employer and Position .
+
+[see png file]
+
+To do this exercise, you need to use forward class declarations ( Section 2.10 ).
+a. Write classes for Person , Position , and Employer , as described in Figure 2.6 .
+b. For Person::getPosition() and getEmployer() , create and return something
+funny if the person has not yet been hired by a company.
+c. For the hire(...) function, set the Person ’s state so that future calls to
+getPosition() and getEmployer() give the correct result.
+d. In the main() program, create at least two Employers: the “StarFleet Federation”
+and the “Borg.”
+e. Create at least two employees: Jean-Luc Picard and Wesley Crusher.
+f. For each class, write a toString() function that gives you a string representation
+of the object.
+g. Write a main program that creates some objects and then prints out each
+company’s list of employees.

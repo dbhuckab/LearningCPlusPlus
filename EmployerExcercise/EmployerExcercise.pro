@@ -24,3 +24,6 @@ HEADERS += \
     person.h \
     position.h \
     employer.h
+
+OTHER_FILES += \
+    Excercise.txt
