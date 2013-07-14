@@ -1,0 +1,30 @@
+Figure 4.4 describes a model 3 for a Contact system. ContactList can derive
+from or reuse any Qt container that you like, as long as it supports the
+operations listed.
+
+• getPhoneList(int category) accepts a value to be compared with
+a Contact ’s category member for selection purposes. It returns a
+QStringList containing, for each selected Contact , the name and
+phone number, separated by the tab symbol: "\t" .
+
+• getMailingList() has a similar selection mechanism and returns a
+QStringList containing address label data.
+
+Extra
+
+Write a ContactFactory class that generates random Contact objects.
+
+Hint:
+
+void createRandomContacts(ContactList& cl, int n=10) {
+    static ContactFactory cf;
+    for (int i=0; i<n; ++i) {
+        cf >> cl;
+    }
+}
+
+There are many ways to generate random names/addresses. One way is to have
+the ContactFactory create lists of typical first names, last names, street names,
+city names, and so forth. 4 When it is time to generate a Contact , it can pick a
+random element from each list, add randomly generated address numbers, zip
+codes, etc. We demonstrate the use of the random() function in Section 1.13.3
